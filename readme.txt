@@ -35,6 +35,20 @@ The server randomly selects a quote using the randint() function based on the nu
 
 The client progam takes 2 optional command parameters for target port number and server address. Without any arguments client assumes that the server address is local and port is default for QotD (17). Client attempts to open socket and connect to the server address and port number, as well as creates a buffer of 1024bytes to receive the quote. The quote is decoded and printed to the screen then the connection is closed.
 
+
+Use:
+
+Server:
+/.qotd_server <port>
+
+Client:
+./qotd <server ip> <port> 
+
+If <server ip> or <port> isn't provided default is localhost and 17
+
+
+
 To Implement:
 
 1. Allow client program to request another quote from the server without disconnecting/reconnecting.
+2. Allow specification of different quote text file at command line.
